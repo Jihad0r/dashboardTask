@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
 
 
   return (
-    <div className="flex flex-col items-center login border-2 p-2 w-1/2 rounded-2xl m-auto">
+    <div className="flex flex-col items-center login border-2 p-2 w-4/5 md:w-1/2 rounded-2xl m-auto">
       <ToastContainer/>
       <MdAccountCircle className="text-6xl"/>
       <h1 className="text-2xl font-bold mb-4">Login</h1>
