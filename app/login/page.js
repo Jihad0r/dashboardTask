@@ -49,7 +49,7 @@ const handleSubmit = (e) => {
       <ToastContainer/>
       <MdAccountCircle className="text-6xl"/>
       <h1 className="text-2xl font-bold mb-4">Login</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="email"
           placeholder="Email"
