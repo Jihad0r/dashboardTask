@@ -13,11 +13,9 @@ export default function ClientLayout({ children }) {
 
   return (
     <Provider store={store}>
-      <div className={`grid ${pathname==='/login'?"":"grid-cols-[70px_1fr] md:grid-cols-[150px_1fr]"} min-h-screen`}>
+      <div>
         {showNavbar  && (
-          <aside className="sticky top-0 h-screen bg-gray-100 shadow-3xl">
             <Sidebar />
-          </aside>
         )}
         <main className="flex flex-col w-full">
           {showNavbar  && (

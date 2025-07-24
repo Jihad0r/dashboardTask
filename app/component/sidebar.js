@@ -1,10 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { GrMoney } from "react-icons/gr";
-
-
 import { RiDashboardHorizontalFill } from "react-icons/ri";
-import { TbArrowDownFromArc } from "react-icons/tb";
-import { TbArrowDownToArc } from "react-icons/tb";
+import { TbArrowDownFromArc, TbArrowDownToArc } from "react-icons/tb";
 
 const navLinks = [
   {
@@ -26,22 +25,23 @@ const navLinks = [
 
 export default function Sidebar() {
   return (
-    <div>
-    <Link href="/">
-  <GrMoney className="m-auto text-3xl mt-3" />
-</Link>
+    <div className="fixed bottom-0 left-0 w-full bg-white shadow-md z-50 flex justify-around items-center py-2">
+      {/* Logo */}
+      <Link href="/">
+        <GrMoney className="text-3xl text-blue-600" />
+      </Link>
 
-    <div className="mt-10 ">
-       {navLinks.map((link, index) => (
+      {/* Navigation Links */}
+      {navLinks.map((link, index) => (
         <Link
           key={index}
           href={link.href}
-          className={`flex flex-row items-center gap-2 m-auto mt-5 justify-center md:justify-start p-2 hover:bg-blue-400 hover:text-white transition-1 `}
+          className="flex flex-col items-center text-sm text-gray-700 hover:text-blue-600 transition"
         >
           {link.icon}
-          <p className="hidden md:block">{link.label}</p>
+          <span className="text-xs mt-1">{link.label}</span>
         </Link>
-      ))}</div>
+      ))}
     </div>
   );
 }

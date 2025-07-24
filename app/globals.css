@@ -14,3 +14,8 @@
 .recharts-legend-wrapper{
   bottom:30px !important;
 }
+.recharts-default-legend{
+  position: absolute;
+  bottom:-40px !important;
+  left: 25%;
+}
