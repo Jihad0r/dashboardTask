@@ -11,3 +11,6 @@
   padding: 20px;
   text-align: center;
 }
+.recharts-legend-wrapper{
+  bottom:30px !important;
+}

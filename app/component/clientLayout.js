@@ -25,7 +25,7 @@ export default function ClientLayout({ children }) {
               <Navbar />
             </header>
           )}
-          <section className="flex-grow p-6 bg-gray-50 mt-15">{children}</section>
+          <section className="flex-grow p-2 md:p-6 bg-gray-50 mt-15">{children}</section>
         </main>
       </div>
     </Provider>

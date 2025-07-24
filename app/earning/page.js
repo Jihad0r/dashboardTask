@@ -14,9 +14,9 @@ const headers = [
 
 function TableRow({ row }) {
   return (
-    <div className="flex justify-between p-5 border-b">
+    <div className="flex gap-2 justify-between  p-5 border-b">
       {headers.map(({ key }) => (
-        <span className="w-20 md:w-40" key={key}>
+        <span className="w-unset lg:w-40" key={key}>
           {row[key]}
         </span>
       ))}

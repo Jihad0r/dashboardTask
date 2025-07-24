@@ -26,7 +26,7 @@ export default function Dashboard() {
         <div className="flex flex-col lg:flex-row">
         <div className="p-5 rounded-2xl flex-1/2">
           <h2 className="font-bold">Spending</h2>
-          <div className=" p-5 bg-white mt-2 rounded-2xl">
+          <div className="p-2 md:p-5 bg-white mt-2 rounded-2xl">
                  <div class="flex justify-between p-5 border-b font-bold cursor-pointer"><span class="w-15 md:w-30">amount</span>
           <span class="w-15 md:w-30">date</span><span class="w-15 md:w-30">reason</span></div> {spending.map((row, index) => (
             <div key={index} className="flex justify-between p-5 border-b">
@@ -38,7 +38,7 @@ export default function Dashboard() {
         </div>
         <div className="p-5 rounded-2xl mt-10 md:mt-0 flex-1/2">
           <h2 className="font-bold">Earning</h2>
-          <div className=" p-5 bg-white mt-2 rounded-2xl">
+          <div className=" p-2 md:p-5 bg-white mt-2 rounded-2xl">
           <div class="flex justify-between p-5 border-b font-bold cursor-pointer"><span class="w-15 md:w-30 ">amount</span>
           <span class="w-15 md:w-30">date</span><span class="w-15 md:w-30">reason</span></div>
           {earning.map((row, index) => (
