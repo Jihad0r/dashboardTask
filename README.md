@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📊 Dashboard App
 
-## Getting Started
+A simple, responsive dashboard built with **React**, **Redux**, and **Tailwind CSS**. It displays user earnings (or similar data) after login and ensures protected access through a `Protected` wrapper component.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔒 **Protected Routes**: Only authenticated users can access the dashboard.
+- 💰 **Earnings Preview**: Displays the most recent 3 earning records from localStorage.
+- 🧠 **Global State Management**: Powered by Redux for scalable state logic.
+- 🎨 **Responsive UI**: Styled with Tailwind CSS for clean and modern design.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- **React** with functional components and hooks  
+- **Redux** (`@reduxjs/toolkit`)  
+- **Tailwind CSS** for styling  
+- **localStorage** for temporary user session data  
+- **Next.js** (App Router assumed if you're using `use client`)  
 
-To learn more about Next.js, take a look at the following resources:
+---
+🔐 Authentication
+Authentication is handled via Redux and localStorage. Users must be logged in for the dashboard to be visible.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+💡 Protected.jsx handles the redirection if the user is not authenticated.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📦 Deployment
+You can deploy this app using:
 
-## Deploy on Vercel
+Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GitHub 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🙌 Contributing
+Pull requests and stars are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+👨‍💻 Author
+Jihad Orabi
+GitHub: @Jihad0r

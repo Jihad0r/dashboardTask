@@ -1,7 +1,5 @@
-import ClientLayout from './component/clientLayout';
-import './globals.css';
 export const metadata = {
-  title: 'Dashboard',
+  title: 'LogIn',
   description: '...',
 };
 
@@ -9,7 +7,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <ClientLayout>{children}</ClientLayout>
+        {children}
       </body>
     </html>
   );
