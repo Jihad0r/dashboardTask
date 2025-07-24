@@ -30,10 +30,21 @@ export default function Earning() {
   const [sortKey, setSortKey] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user?.earning) setData(user.earning);
-  }, []);
+ useEffect(() => {
+  const getDataFromLocalStorage = () => {
+    try {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user?.earning) setData(user?.earning);
+    } catch (error) {
+      console.error("Failed to load from localStorage:", error);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    getDataFromLocalStorage();
+  }
+}, []);
+
 
   const handleSort = (key) => {
     if (sortKey === key) {

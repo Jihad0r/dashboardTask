@@ -8,10 +8,10 @@ export default function Navbar() {
 
  
   const [showNav, setShowNav] = useState(true);
-
+let user;
   const [lastScrollY, setLastScrollY] = useState(0);
- const user = JSON.parse(localStorage.getItem("user")) || null;
   useEffect(() => {
+     user= JSON.parse(localStorage.getItem("user")) || null;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -34,7 +34,7 @@ export default function Navbar() {
       showNav ? 'translate-y-0' : '-translate-y-full'
     }`}
   >
-    <h1 className="text-xl font-bold">Hello,{user.username}</h1>
+    <h1 className="text-xl font-bold">Hello,{user?.username}</h1>
     <button
       onClick={() => dispatch(logout())}
       className="py-2 px-4 absolute right-20 md:right-40 top-2 rounded-2xl bg-gray-300 hover:bg-black hover:text-white cursor-pointer"

@@ -31,9 +31,20 @@ export default function Spending() {
   const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user?.spending) setData(user.spending);
-  }, []);
+  const getDataFromLocalStorage = () => {
+    try {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user?.spending) setData(user.spending);
+    } catch (error) {
+      console.error("Failed to load from localStorage:", error);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    getDataFromLocalStorage();
+  }
+}, []);
+
 
   const handleSort = (key) => {
     if (sortKey === key) {
