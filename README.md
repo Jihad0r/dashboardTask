@@ -37,6 +37,12 @@ GitHub
 🙌 Contributing
 Pull requests and stars are welcome. For major changes, please open an issue first to discuss what you’d like to change.
 
+
+You can login with this
+
+email: john.doe@gmail.com
+password: Password123!
+
 👨‍💻 Author
 Jihad Orabi
 GitHub: @Jihad0r
