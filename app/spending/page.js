@@ -60,7 +60,7 @@ export default function Spending() {
 
   return (
     <Protected>
-      <div className="p-5  text-sm">
+      <div className="p-5 bg-white rounded-2xl text-sm">
         <div className="flex justify-between">   <h1 className="text-3xl font-bold mb-5">Spending</h1>
         <input
           type="text"

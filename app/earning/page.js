@@ -59,7 +59,7 @@ export default function Earning() {
 
   return (
     <Protected>
-      <div className="p-5 text-sm">
+      <div className="p-5 text-sm bg-white  rounded-2xl">
         <div className="flex justify-between">   <h1 className="text-3xl font-bold mb-5">Earning</h1>
         <input
           type="text"

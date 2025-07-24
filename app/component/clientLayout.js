@@ -17,13 +17,13 @@ export default function ClientLayout({ children }) {
         {showNavbar  && (
             <Sidebar />
         )}
-        <main className="flex flex-col w-full">
+        <main className="flex flex-col w-full mb-12">
           {showNavbar  && (
             <header>
               <Navbar />
             </header>
           )}
-          <section className="flex-grow p-2 md:p-6 bg-gray-50 mt-15">{children}</section>
+          <section className="flex-grow p-2 md:p-6 bg-gray-100 mt-15">{children}</section>
         </main>
       </div>
     </Provider>
