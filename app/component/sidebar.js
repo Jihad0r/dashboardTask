@@ -25,21 +25,18 @@ const navLinks = [
 
 export default function Sidebar() {
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white shadow-md z-50 flex justify-around items-center py-2">
-      {/* Logo */}
+    <div className="lg:h-full h-10 w-full fixed bottom-0  lg:w-40 bg-white shadow-md z-50 flex flex-row lg:flex-col  lg:gap-20 justify-around lg:justify-start items-center py-2">
       <Link href="/">
-        <GrMoney className="text-3xl text-blue-600" />
+        <GrMoney className="text-4xl text-blue-600" />
       </Link>
-
-      {/* Navigation Links */}
       {navLinks.map((link, index) => (
         <Link
           key={index}
           href={link.href}
-          className="flex flex-col items-center text-sm text-gray-700 hover:text-blue-600 transition"
+          className="flex flex-col gap-2 md:flex-row items-center text-sm text-gray-700 hover:text-blue-600 transition"
         >
           {link.icon}
-          <span className="text-xs mt-1">{link.label}</span>
+          <span className="text-xs mt-1 hidden md:block">{link.label}</span>
         </Link>
       ))}
     </div>

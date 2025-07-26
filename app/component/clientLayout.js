@@ -13,17 +13,18 @@ export default function ClientLayout({ children }) {
 
   return (
     <Provider store={store}>
-      <div>
+      <div className={`block ${pathname ==='/login'?"":"lg:grid grid-cols-[150px_1fr]"} min-h-screen`}>
         {showNavbar  && (
             <Sidebar />
         )}
-        <main className="flex flex-col w-full mb-12">
+        <div></div>
+        <main className=" md:mb-2 mb-12">
           {showNavbar  && (
             <header>
               <Navbar />
             </header>
           )}
-          <section className="flex-grow p-2 md:p-6 bg-gray-100 mt-15">{children}</section>
+          <section className="flex-grow p-6 mt-15">{children}</section>
         </main>
       </div>
     </Provider>

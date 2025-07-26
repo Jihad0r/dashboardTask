@@ -29,9 +29,9 @@ export default function LivingChart() {
   }, []);
 
   return (
-    <div className="w-full lg:w-1/2 p-2  md:p-5">
-      <h2 className="text-lg font-semibold mb-2">Cost of Living</h2>
-      <div className="h-100 rounded-xl bg-white shadow-sm p-2">
+    <div className="w-full lg:w-1/2 piechart">
+      <h2 className="font-bold">Cost of Living</h2>
+      <div className="h-100 rounded-xl bg-white shadow-sm my-2  p-2">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie

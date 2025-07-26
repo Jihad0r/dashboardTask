@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body{
+  background-color: rgb(243, 243, 243);
+}
 
 .login{
   background-color: rgb(0,0,0);
@@ -11,11 +14,12 @@
   padding: 20px;
   text-align: center;
 }
-.recharts-legend-wrapper{
-  bottom:30px !important;
+.piechart .recharts-legend-wrapper{
+  bottom:40px !important;
+  left:15px !important;
 }
-.recharts-default-legend{
+.barchart .recharts-default-legend{
   position: absolute;
-  bottom:-40px !important;
-  left: 25%;
+  bottom: -20px !important;
+  left: 30%;
 }

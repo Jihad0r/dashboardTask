@@ -35,10 +35,10 @@ export default function EanrandSpendChart() {
   }, []);
 
   return (
-    <div className="w-full lg:w-1/2 mb-5  p-2 md:p-5">
+    <div className="w-full lg:w-1/2 mb-5 barchart">
     <div style={{ width: "100%", height: 400 }}>
        <h2 className="font-bold">Spending and Earning</h2>
-      <ResponsiveContainer width="100%" height="100%" className="bg-white mt-2 rounded-2xl p-5">
+      <ResponsiveContainer width="100%" height="100%" className="bg-white rounded-2xl my-2  p-5">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="day" />

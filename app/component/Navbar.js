@@ -8,10 +8,11 @@ export default function Navbar() {
   const dispatch = useDispatch();
  
   const [showNav, setShowNav] = useState(true);
-let user;
+  
+  const [user, setUser] = useState("");
   const [lastScrollY, setLastScrollY] = useState(0);
   useEffect(() => {
-     user= JSON.parse(localStorage.getItem("user")) || null;
+    setUser(JSON.parse(localStorage.getItem("user")) || null)
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -29,11 +30,15 @@ let user;
 
 
   return (
-    <div className="fixed top-0 right-0 w-full bg-white shadow-md z-50 flex justify-around items-center py-2">
-      <h1 className="text-xl font-bold ">Hello,{user?.username}</h1>
+     <div
+    className={`bg-white shadow-3xl flex items-center justify-between p-4 fixed min-w-full  top-0 z-20 transition-transform duration-300 ${
+      showNav ? 'translate-y-0' : '-translate-y-full'
+    }`}
+  >
+      <h1 className="text-xl font-bold ">Hello, {user?.username}</h1>
       <button
       onClick={() => dispatch(logout())}
-      className="py-2 px-4 rounded-2xl bg-gray-300 hover:bg-black hover:text-white cursor-pointer"
+      className="py-2 px-4 rounded-2xl mr-0 lg:mr-35 bg-gray-300 hover:bg-black hover:text-white cursor-pointer"
     >
       Logout
     </button></div>
